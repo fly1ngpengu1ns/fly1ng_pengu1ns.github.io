@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>picoCTF2022_wp_fgps | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="picoCTF2022_wp@fgps简单来写一下picoCTF2022的一些题解尽量持续更新中……">
+<meta property="og:type" content="article">
+<meta property="og:title" content="picoCTF2022_wp_fgps">
+<meta property="og:url" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="picoCTF2022_wp@fgps简单来写一下picoCTF2022的一些题解尽量持续更新中……">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/..%5Cimages%5CpicoCTF2022%5Ccredstuff.png">
+<meta property="og:image" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/..%5Cimages%5CpicoCTF2022%5Cmorse-code.png">
+<meta property="og:image" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/..%5Cimages%5CpicoCTF2022%5CEnhance!.png">
+<meta property="og:image" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/..%5Cimages%5CpicoCTF2022%5CLook-here.png">
+<meta property="article:published_time" content="2022-03-27T14:36:59.000Z">
+<meta property="article:modified_time" content="2022-03-27T14:45:43.394Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="Crypto">
+<meta property="article:tag" content="Misc">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/03/27/picoCTF2022-wp-fgps/..%5Cimages%5CpicoCTF2022%5Ccredstuff.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-picoCTF2022-wp-fgps" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/03/27/picoCTF2022-wp-fgps/" class="article-date">
+  <time datetime="2022-03-27T14:36:59.000Z" itemprop="datePublished">2022-03-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/CTF/">CTF</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      picoCTF2022_wp_fgps
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="picoCTF2022-wp-fgps"><a href="#picoCTF2022-wp-fgps" class="headerlink" title="picoCTF2022_wp@fgps"></a>picoCTF2022_wp@fgps</h1><p>简单来写一下<a target="_blank" rel="noopener" href="https://play.picoctf.org/events/70/challenges">picoCTF2022</a>的一些题解尽量持续更新中……</p>
+<span id="more"></span>
+<h1 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h1><h2 id="basic-mod1"><a href="#basic-mod1" class="headerlink" title="basic-mod1"></a>basic-mod1</h2><p>直接输入数字然后模37即可。。。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python</span></span><br><span class="line">c = <span class="built_in">input</span>().split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">c = [<span class="built_in">int</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> c]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">    tmp = i % <span class="number">37</span></span><br><span class="line">    <span class="keyword">if</span> tmp &lt; <span class="number">26</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>) + tmp), end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> tmp &lt; <span class="number">36</span>:</span><br><span class="line">        <span class="built_in">print</span>(tmp - <span class="number">26</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;_&#x27;</span>, end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>得到解密内容：R0UND_N_R0UND_CE58A3A0套上picoCTF{}即可</p>
+<h2 id="basic-mod2"><a href="#basic-mod2" class="headerlink" title="basic-mod2"></a>basic-mod2</h2><p>计算出每个数字模41的逆，然后根据对应关系计算flag</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python</span></span><br><span class="line">c = <span class="built_in">input</span>().split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">c = [<span class="built_in">int</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> c]</span><br><span class="line">m = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">    tmp = <span class="built_in">pow</span>(i, -<span class="number">1</span>, <span class="number">41</span>)</span><br><span class="line">    <span class="keyword">if</span> tmp &lt;= <span class="number">26</span>:</span><br><span class="line">        m += <span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>) + tmp - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">elif</span> tmp &lt;= <span class="number">36</span>:</span><br><span class="line">        m += <span class="built_in">chr</span>(tmp - <span class="number">27</span> + <span class="built_in">ord</span>(<span class="string">&#x27;0&#x27;</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        m += <span class="string">&#x27;_&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;picoCTF&#123;&#x27;</span> + m + <span class="string">&#x27;&#125;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>得到flag：picoCTF{1NV3R53LY_H4RD_B7FB947C}</p>
+<h2 id="credstuff"><a href="#credstuff" class="headerlink" title="credstuff"></a>credstuff</h2><p>通过usernames.txt和passwords.txt找到所需的密码：cvpbPGS{P7e1S_54I35_71Z3}<br><img src="..%5Cimages%5CpicoCTF2022%5Ccredstuff.png" alt="credstuff"><br>rot13得到flag：picoCTF{C7r1F_54V35_71M3}</p>
+<h2 id="morse-code"><a href="#morse-code" class="headerlink" title="morse-code"></a>morse-code</h2><p>下载莫斯电报后用音频软件打开得到波形图：<br><img src="..%5Cimages%5CpicoCTF2022%5Cmorse-code.png" alt="morse-code"><br>得到电报码：.–/…./….-/–…/…./….-/–…/…./—-./—–/-../.–/..—/—–/..-/—-./…./–…/<br>进而得到flag：picoCTF{WH47_H47H_90D_W20U9H7}</p>
+<h2 id="rail-fence"><a href="#rail-fence" class="headerlink" title="rail-fence"></a>rail-fence</h2><p>根据提示使用栅栏解密，但是常规的栅栏解密不能得出flag，需要使用W型栅栏解密才能得出明文信息：<br>The flag is: WH3R3_D035_7H3_F3NC3_8361N_4ND_3ND_D81DB8E3套上picoCTF{}即可</p>
+<h2 id="substitution0"><a href="#substitution0" class="headerlink" title="substitution0"></a>substitution0</h2><p>下载文件是一个替换题，直接丢到<a target="_blank" rel="noopener" href="http://www.quipqiup.com/">quipqiup - cryptoquip and cryptogram solver</a>中进行解密（也可以用密文中vydzDKL{5GA5717G710B_3R0SG710B_A1N36772}这一信息进行回退）<br>得到flag：picoCTF{5UB5717U710N_3V0LU710N_B1D36772}</p>
+<h2 id="substitution1"><a href="#substitution1" class="headerlink" title="substitution1"></a>substitution1</h2><p>和substitution0一样丢到<a target="_blank" rel="noopener" href="http://www.quipqiup.com/">quipqiup - cryptoquip and cryptogram solver</a>中进行解密即可。。。<br>For this problem, the flag is: picoCTF{FR3QU3NCY_4774CK5_4R3_C001_E5B0CCDB}</p>
+<h2 id="substitution2"><a href="#substitution2" class="headerlink" title="substitution2"></a>substitution2</h2><p>继续丢到<a target="_blank" rel="noopener" href="http://www.quipqiup.com/">quipqiup - cryptoquip and cryptogram solver</a>中进行解密即可。。。<br>the flag is picoCTF{N6R4M_4N41Y515_15_73D10U5_6CF50B5C}</p>
+<h2 id="transposition-trial"><a href="#transposition-trial" class="headerlink" title="transposition-trial"></a>transposition-trial</h2><p>下载文件后先分成三组，然后用第一组先看看信息有什么规律：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python</span></span><br><span class="line">m = <span class="string">&#x27;heTfl g as iicpCTo&#123;7F4NRP051N5_16_35P3X51N3_VE1A1D3D&#125;B&#x27;</span></span><br><span class="line">lenm = <span class="built_in">len</span>(m)//<span class="number">3</span></span><br><span class="line">m1 = m[:lenm]</span><br><span class="line">m2 = m[lenm:lenm*<span class="number">2</span>]</span><br><span class="line">m3 = m[lenm*<span class="number">2</span>:]</span><br><span class="line"><span class="built_in">print</span>(m1)</span><br></pre></td></tr></table></figure>
+<p>得到m1：heTfl g as iicpCTo  后将其转化为：The flag is picoCT  将对应位进行移动<br>（真就纯试啊好奇好评率怎么还有72）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C/C++</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> m[<span class="number">3</span>][<span class="number">20</span>] = &#123;<span class="string">&quot;heTfl g as iicpCTo&quot;</span>, <span class="string">&quot;&#123;7F4NRP051N5_16_35&quot;</span>, <span class="string">&quot;P3X51N3_VE1A1D3D&#125;B&quot;</span>&#125;;</span><br><span class="line">    <span class="type">char</span> c[<span class="number">3</span>][<span class="number">20</span>] = &#123;&#123;<span class="string">&#x27;\0&#x27;</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        c[i][<span class="number">0</span>] = m[i][<span class="number">2</span>];</span><br><span class="line">        c[i][<span class="number">1</span>] = m[i][<span class="number">0</span>];</span><br><span class="line">        c[i][<span class="number">2</span>] = m[i][<span class="number">1</span>];</span><br><span class="line">        c[i][<span class="number">4</span>] = m[i][<span class="number">3</span>];</span><br><span class="line">        c[i][<span class="number">5</span>] = m[i][<span class="number">4</span>];</span><br><span class="line">        c[i][<span class="number">6</span>] = m[i][<span class="number">8</span>];</span><br><span class="line">        c[i][<span class="number">7</span>] = m[i][<span class="number">6</span>];</span><br><span class="line">        c[i][<span class="number">10</span>] = m[i][<span class="number">9</span>];</span><br><span class="line">        c[i][<span class="number">12</span>] = m[i][<span class="number">14</span>];</span><br><span class="line">        c[i][<span class="number">14</span>] = m[i][<span class="number">13</span>];</span><br><span class="line">        c[i][<span class="number">15</span>] = m[i][<span class="number">17</span>];</span><br><span class="line">        c[i][<span class="number">16</span>] = m[i][<span class="number">15</span>];</span><br><span class="line">        c[i][<span class="number">17</span>] = m[i][<span class="number">16</span>];</span><br><span class="line">        <span class="comment">//&#x27; &#x27;</span></span><br><span class="line">        c[i][<span class="number">3</span>] = m[i][<span class="number">5</span>];</span><br><span class="line">        c[i][<span class="number">8</span>] = m[i][<span class="number">7</span>];</span><br><span class="line">        c[i][<span class="number">11</span>] = m[i][<span class="number">10</span>];</span><br><span class="line">        <span class="comment">//&#x27;i&#x27;</span></span><br><span class="line">        c[i][<span class="number">9</span>] = m[i][<span class="number">11</span>];</span><br><span class="line">        c[i][<span class="number">13</span>] = m[i][<span class="number">12</span>];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, c[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>得到明文：The flag is picoCTF{7R4N5P051N6_15_3XP3N51V3_AE131DBD}</p>
+<h2 id="Vigenere"><a href="#Vigenere" class="headerlink" title="Vigenere"></a>Vigenere</h2><p>学习了一下Vigenere算法的加密原理，相当于是将字母表按123排列后分组计算明文字符加密钥字符再模26。直接找一个在线解密网站解密出flag：<br>picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_b0fq78b8}</p>
+<h2 id="diffie-hellman"><a href="#diffie-hellman" class="headerlink" title="diffie-hellman"></a>diffie-hellman</h2><p>先用Diffie-Hellman算法算出密钥$K = g^{a*b} (mod;q)$ ，然后根据信息将字母表和0~9拼在一起使用凯撒解密即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python</span></span><br><span class="line">p = <span class="number">13</span></span><br><span class="line">g = <span class="number">5</span></span><br><span class="line">a = <span class="number">7</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line">K = <span class="built_in">pow</span>(g, a*b, p)</span><br><span class="line"></span><br><span class="line">table = <span class="string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</span></span><br><span class="line">c = <span class="string">&quot;H98A9W_H6UM8W_6A_9_D6C_5ZCI9C8I_DI9D987F&quot;</span></span><br><span class="line">m = <span class="string">&#x27;&#x27;</span></span><br><span class="line">_A = <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">_Z = <span class="built_in">ord</span>(<span class="string">&#x27;Z&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> c:</span><br><span class="line">    <span class="keyword">if</span> _A &lt;= <span class="built_in">ord</span>(i) &lt;= _Z:</span><br><span class="line">        tmp = (<span class="built_in">ord</span>(i) - _A - K) % <span class="number">36</span></span><br><span class="line">        m += table[tmp]</span><br><span class="line">    <span class="keyword">elif</span> i == <span class="string">&#x27;_&#x27;</span>:</span><br><span class="line">        m += <span class="string">&#x27;_&#x27;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tmp = (<span class="built_in">ord</span>(i) - <span class="built_in">ord</span>(<span class="string">&#x27;0&#x27;</span>) + <span class="number">26</span> - K) % <span class="number">36</span></span><br><span class="line">        m += table[tmp]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;picoCTF&#123;&#x27;</span> + m + <span class="string">&#x27;&#125;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>得到flag：picoCTF{C4354R_C1PH3R_15_4_817_0U7D473D_8D48432A}</p>
+<h2 id="Very-Smooth"><a href="#Very-Smooth" class="headerlink" title="Very Smooth"></a>Very Smooth</h2><p>根据信息搜索到是一个光滑数的RSA加密，可以使用<a target="_blank" rel="noopener" href="https://ctf-wiki.org/crypto/asymmetric/rsa/rsa_module_attack/#p-1">模数相关攻击 - CTF Wiki (ctf-wiki.org)</a>中的 $p-1$ 和 $q-1$ 是光滑数使用Pollard’s p-1算法算出p。然后再常规rsa即可</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#python</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Pollards_p_1</span>(<span class="params">N</span>):</span><br><span class="line">    a = <span class="number">2</span></span><br><span class="line">    n = <span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        a = <span class="built_in">pow</span>(a, n, N)</span><br><span class="line">        p = gmpy2.gcd(a-<span class="number">1</span>, N)</span><br><span class="line">        <span class="keyword">if</span> p != <span class="number">1</span> <span class="keyword">and</span> p != N:</span><br><span class="line">            <span class="comment">#print(&#x27;np = &#x27;, n)</span></span><br><span class="line">            <span class="comment">#print(&#x27;p = &#x27;, p)</span></span><br><span class="line">            <span class="keyword">return</span> p</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">e = <span class="number">0x10001</span></span><br><span class="line">n = <span class="number">0x809fbd8b667d664f01fe1b0387e0b424efe2035e2dec4d249ace30563d0e1a50050020880c2f01bad63b22e21125d780d887cffdb1165268e6be788cd49ad8a9a1d27482f1a8ccbb37adc0deee65d09f312ebaab854782e2411d917181fef63d478b7e25391ac10d0330cafcb5c8d859ee1e403be029ce5dd75f864deabe5a65645b099afb7af4ed84dd75d1e4b966e2a0662ece5409feeacb2a277ddf05b72153ff6f36524f7693cc432269b56bd8ab3d601844aef6a6130eaaec08f92f9816ed0e7781a23a043570364807bef579c1e9175e3fe2b1d8f52356230feea244ce1b88b2342c9e40b25583a1fe558bdfb3a7115a4c71a6f06b706419ce8e21a3e1</span></span><br><span class="line">c = <span class="number">0x74ce97c4712bc3827a9f6021089c093a7540a6280330a9ec7c6f446a88093c33a6b9a0a1fdf2cad96e32344970adbf26601d9baf2c4e9892dde435dc994bde4754fddbac47a475b3907a455c6f671484b473b5481080224406b1d48d48da5ba0d9fccdc5732cb64c0f02c32ddc1413f66bd95b8e5a929e5b1f14843bd8f5d4747a4aabcc64217a187db6913facce48f2019b5524633153ee40a4376960b7f669f331da29227fa9a8c09a58a6f3db7453dd89a6093c062ff95502cc7cca5ee497c8ec6265413f5d05d1b720b4eb620875b6f6d2a7958e2391835497a106f4c280cd1ca8b9605bbef5952b54dffc028c160c1495e5cd2957f6f2bbb2e868823b6a</span></span><br><span class="line"></span><br><span class="line">p = Pollards_p_1(n)</span><br><span class="line">q = n // p</span><br><span class="line"><span class="keyword">assert</span> p*q == n</span><br><span class="line">d = gmpy2.invert(e, (p-<span class="number">1</span>)*(q-<span class="number">1</span>))</span><br><span class="line">m = <span class="built_in">pow</span>(c, d, n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>得到flag：picoCTF{91e08d13}</p>
+<h2 id="Sequences"><a href="#Sequences" class="headerlink" title="Sequences"></a>Sequences</h2><p>查看代码，是个线性递归函数计算。贴两种计算方法的链接：</p>
+<blockquote>
+<p>常规解方程<a target="_blank" rel="noopener" href="https://study.com/academy/lesson/how-to-solve-linear-recurrence-relations.html">如何求解线性递归关系|Study.com</a><br>矩阵算法<a target="_blank" rel="noopener" href="https://www.hackerearth.com/practice/notes/solving-linear-recurrence-relation/">求解线性递归关系|黑客地球 (hackerearth.com)</a> </p>
+</blockquote>
+<p>回到题目，给出的线性方程是 :<br>$$f(x) =<br>\begin{cases}<br>1,,,x = 0\<br>2,,,x=1\<br>3,,,x=2\<br>4,,,x=3\<br>21<em>f(x-1) + 301</em>f(x-2) - 9549<em>f(x-3) +55692</em>f(x-4),,,x\geqslant4\<br>\end{cases}<br>$$<br>要我们计算出 $sol = f(2e7)$ 然后进入到 decrypt_flag(sol) 函数中，将 $sol,%1,0^5$ 进行md5加密后与VERIF_KEY验证成功后，将其sha256与给出的密文的每个字符异或一下就行<br>不难看出问题主要是求解线性递归函数的值，根据提示应该就是使用上述的矩阵算法求解一下就行(正好学习一下用sage解矩阵问题)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sage</span></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">ITERS = <span class="built_in">int</span>(<span class="number">2e7</span>)</span><br><span class="line">VERIF_KEY = <span class="string">&quot;96cc5f3b460732b442814fd33cf8537c&quot;</span></span><br><span class="line">ENCRYPTED_FLAG = <span class="built_in">bytes</span>.fromhex(</span><br><span class="line">    <span class="string">&quot;42cbbce1487b443de1acf4834baed794f4bbd0dfe08b5f3b248ef7c32b&quot;</span>)</span><br><span class="line"></span><br><span class="line">a0 = matrix([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]).transpose()</span><br><span class="line">T = matrix(ZZ, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">T[<span class="number">0</span>] = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">T[<span class="number">1</span>] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>]</span><br><span class="line">T[<span class="number">2</span>] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">T[<span class="number">3</span>] = [<span class="number">55692</span>, -<span class="number">9549</span>, <span class="number">301</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cnt_Ti</span>(<span class="params">i</span>):</span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> T</span><br><span class="line">    <span class="keyword">elif</span> i % <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> T*cnt_Ti(i-<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> cnt_Ti(i//<span class="number">2</span>) ^ <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">m_func</span>(<span class="params">i</span>):</span><br><span class="line">    tmp = cnt_Ti(i)*a0</span><br><span class="line">    <span class="keyword">return</span> tmp[<span class="number">0</span>][<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Decrypt the flag</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt_flag</span>(<span class="params">sol</span>):</span><br><span class="line">    sol = sol % (<span class="number">10</span>**<span class="number">10000</span>)</span><br><span class="line">    sol = <span class="built_in">str</span>(sol)</span><br><span class="line">    sol_md5 = hashlib.md5(sol.encode()).hexdigest()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> sol_md5 != VERIF_KEY:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Incorrect solution&quot;</span>)</span><br><span class="line">        sys.exit(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    key = hashlib.sha256(sol.encode()).digest()</span><br><span class="line">    flag = <span class="built_in">bytearray</span>([char ^^ key[i]</span><br><span class="line">                     <span class="keyword">for</span> i, char <span class="keyword">in</span> <span class="built_in">enumerate</span>(ENCRYPTED_FLAG)]).decode()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(flag)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    sol = m_func(ITERS)</span><br><span class="line">    decrypt_flag(sol)</span><br></pre></td></tr></table></figure>
+<p>有两点要稍微注意一下，首先是我跑sage的时候不知道为什么装饰器调用不了所以也没用（不过此题好像也用不到就是了），其次是sage中的异或是^^，需要在decrypt_flag函数中稍微修改一下就行<br>得到flag：picoCTF{b1g_numb3rs_4ebc92cc}</p>
+<h2 id="Sum-O-Primes"><a href="#Sum-O-Primes" class="headerlink" title="Sum-O-Primes"></a>Sum-O-Primes</h2><p>查看gen.py，发现对于两个1024bit的素数p和q，给出了 $x=p+q$ 和 $n=p<em>q$<br>直接算出 $km=(p-1)</em>(q-1) = n - x + 1$ 其中k是一未知常数。用km也可以计算出适用与私钥的d值，因为对于 $e*d’ = n_1 *k <em>m+1$ 来说必可以找到一个 $n_2$ 使得 $e</em>d ‘=n_2 * m  +1$ 成立。<br>因此可以计算出私钥，进一步计算出明文</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line">x = <span class="number">0x1603fc8d929cb31edf62bcce2d06794f3efd095accb163e6f2b78941bd8c646d746369636a582aaac77c16a9486881a9e3db26d742e48c4adcc417ef98f310a0c5433ab077dd872530c3c3c77fe0c080d84154bfdb4c920df9617e986999104d9284516c7babc80dc53718d59032aefdf41b9be53957dea3f00a386b2666d446e</span></span><br><span class="line">n = <span class="number">0x75302ba292dc4bf47ffd690b8edc70ef1fcca5e148b2b9c1b60227788afcfe77a0097929ed3789fe51ac66f678c558244890a09ae4af3e7d098fd366a1c859edabbff1c9e164d5354968798107ae8518fcaab3743de58a141ffd26c1e16cb09fed1f6b0d68536ec7fba744ed120fea8c3a7ac1ebfa55d664d2f321fb44e814650147a9031f3bfa8f69d87393c7d88976d28d147398a355020bcb8e5613f0b29028b77db710e163ca1019fd3c3a065465ea457adec45243c385d12d3a1de3178f6ca05964be92e8b5bc24d420956de96ccc9ce39e70705660eb6b2f4e675aac7d6d7ba45c84223fc5819b37aa85beff1382f1c2c3b97603150f30c17f7e674441</span></span><br><span class="line">c = <span class="number">0x562888c70ce9a5c5ed9a0be1b6196f854ba2efcdb6dd0f79319ee9e1142659f90a6bae67481eb0f635f445d3c9889da84639beb84ff7159dcf4d3a389873dc90163270d80dbb9503cbc32992cb592069ba5b3eb2bbe410a3121d658f18e100f7bd878a25c27ab8c6c15b690fce1ca43288163c544bfce344bcd089a5f4733acc7dc4b6160718e3c627e81a58f650281413bb5bf7bad5c15b00c5a2ef7dbe7a44cce85ed5b1becd5273a26453cb84d327aa04ad8783f46d22d61b96c501515913ca88937475603437067ce9dc10d68efc3da282cd64acaf8f1368c1c09800cb51f70f784bd0f94e067af541ae8d20ab7bfc5569e1213ccdf69d8a81c4746e90c1</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line"></span><br><span class="line">km = n - x + <span class="number">1</span></span><br><span class="line">d = gmpy2.invert(e, km)</span><br><span class="line">FLAG = <span class="built_in">pow</span>(c, d, n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(FLAG))</span><br></pre></td></tr></table></figure>
+<p>得到flag：picoCTF{674b189f}</p>
+<h2 id="NSA-Backdoor"><a href="#NSA-Backdoor" class="headerlink" title="NSA Backdoor"></a>NSA Backdoor</h2><p>打开gen.py，先是使用了和题目Very Smooth相同的生成光滑数算法生成了p和q，然后以 $c=3^{FLAG},(mod,(p*q))$ 的形式得到密文c<br>转化为求解离散对数问题，根据提示使用<a target="_blank" rel="noopener" href="https://ctf-wiki.org/crypto/asymmetric/discrete-log/discrete-log/#pohlig-hellman-algorithm">Pohlig-Hellman algorithm</a>这个算法求解即可(详细一点的可以看这一篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/oampamp1/article/details/104061969">离散对数问题——pohlig-hellman算法讲解_DrGilbert的博客</a>)<br>需要注意的是，先将n分解为p和q之后，首先断言flag转换成的bit较小，即 $c = 3^{FLAG}$ 成立，那么如果能够算出 $c = 3^x ,(mod,p)$ 或者 $c = 3^x ,(mod,q)$ 有一个成立的x值的话，这个x值就是flag</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"><span class="comment"># 先求解p,q</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Pollards_p_1</span>(<span class="params">N</span>):</span><br><span class="line">    a = <span class="number">2</span></span><br><span class="line">    n = <span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        a = <span class="built_in">pow</span>(a, n, N)</span><br><span class="line">        ok = gmpy2.gcd(a-<span class="number">1</span>, N)</span><br><span class="line">        <span class="keyword">if</span> ok != <span class="number">1</span> <span class="keyword">and</span> ok != N:</span><br><span class="line">            <span class="comment"># print(&#x27;np = &#x27;, n)</span></span><br><span class="line">            <span class="comment"># print(&#x27;p = &#x27;, ok)</span></span><br><span class="line">            <span class="keyword">return</span> ok</span><br><span class="line">        n += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">n = <span class="number">0x71c27455f38b75f08868b5965d7afba3d81bff38f3b63271ad9250b9d7dc8c909d3555593c2eff9c27a3c259f8e95da41d55544a362494476141c8ccb93fc7d9019d965a20e16d55daf57b5663ede8d5ad97b7be239ecacb2636621ef997854f18f6da1394101dfb8229a2253dbc3ffc995cc6197bd85455f6178c14dbb9a611b3b42530fcdc5c36c5f63fd3796efdfc440a76cf966ff8c56e7e55872a57aa3a335c2b10a82421bcd1cd0d238496f2830d6524f6ba8e9890e30c4e6ad11df8948f4b428d8089a5d9455baca34cee61cb238042bcf8293aab13595aeb90fedabf23b1d0e82c6882824aa0f78c2208de641d9592a170ed839728f6c7e6b6bdf831</span></span><br><span class="line">c = <span class="number">0x2560971fdf742d398ae3e677082ab950e99edde5577abcc4d704d65577ec287169d209f2033c82e7574f7e6c27540bb07416cd12b5fca1bb5c7ae23e80bb00b81a5c49116fa3cca6ab72f4a56b2bf0d51c58eedb918faa1e88d6fddb7dd358c1cdaa6e61964284014919662f75adaad5065a3633067b2297cd4657d39c8e2cdb02fd80ba33447abb8bfcd4dd68166f487094108afe5b4378f5f6eb9209f503b718dec9c841089551db648f5b5a84357b2319eb1b27935c3bc47c645f732d36cfffcb0e7f1c8ec5859413e6d62f7ed9af27f4712ca91bbdb9526ea19414c82090a52a78e6bbc2a756b5756017ee08326cd7b1d5dd9fff6afb12bcb93fb541a542</span></span><br><span class="line"><span class="comment"># c = pow(3, FLAG, n)</span></span><br><span class="line"></span><br><span class="line">p = Pollards_p_1(n)</span><br><span class="line">q = n // p</span><br><span class="line"><span class="keyword">assert</span> p*q == n</span><br><span class="line"><span class="built_in">print</span>(p)</span><br><span class="line"><span class="built_in">print</span>(q)</span><br></pre></td></tr></table></figure>
+<p>先记录一下由<a target="_blank" rel="noopener" href="https://www.codetd.com/article/10902376">密码学笔记：离散对数求解相关算法实现 - 代码天地 (codetd.com)</a>用python实现的Pohlig-Hellman算法，但是跑了一个小时没解出来。。。用sage秒了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#sage</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"></span><br><span class="line">R = GF(<span class="number">107878320716069936845347261730222923402619282584236808136469656719645067255143372538361375857163594280233925663413568686520703251291382637679919197208920902793419007945364505474185442005931731898039583502138819092649272834779913753377381462765827012568092442233669634217190652686190269458879367972776287369087</span>)</span><br><span class="line">c = R(<span class="number">4718447750724026960198694353334844739217505692188089979205287902511725532311569199632417744122258940413006438515024778380545236447199956486141746728921282928492469653129506822466650013787028619239094093189336116702354002575036042441159707662906078282774445269111406924195008479670069966761807780816630970097935613962494172989787492148192467844779659251027338850586442721256070023515234734429552425201570424044244493798745985930424493915946539530113932455027066048161948792422458683395300567227203873395399720109905411980171312819916204231817116409767525860309628443293880324309777205417461936368372497941988812891458</span>)</span><br><span class="line">e = R(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">flag = discrete_log(c,e)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(flag))</span><br></pre></td></tr></table></figure>
+<p>得到flag：picoCTF{fd0d45f6}<br>PS:这题还是学到了蛮多的，CRT、exgcd、一些离散对数算法以及sage的应用等等，值得研究</p>
+<hr>
+<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><p>主要在做crypto，做三个简单的隐写的misc。。。</p>
+<h2 id="Enhance！"><a href="#Enhance！" class="headerlink" title="Enhance！"></a>Enhance！</h2><p>下载一个.svg图片，之前没接触过，大概搜了一下是一个用XML格式定义图像的东西。不大了解语法，不过直接用010editor打开看信息就行：<br><img src="..%5Cimages%5CpicoCTF2022%5CEnhance!.png" alt="Enhance!">得到flag：picoCTF{3nh4nc3d_56e87c96}</p>
+<h2 id="Lookey-here"><a href="#Lookey-here" class="headerlink" title="Lookey here"></a>Lookey here</h2><p>打开下载的txt文本，显然查找picoCTF即可：<br><img src="..%5Cimages%5CpicoCTF2022%5CLook-here.png" alt="Lookey-here"><br>得到flag：picoCTF{gr3p_15_@w3s0m3_0abe82b2}</p>
+<h2 id="St3g0"><a href="#St3g0" class="headerlink" title="St3g0"></a>St3g0</h2><p>根据提示使用stegsolve看看lsb隐写，发现flag位于文件开始处。<br>flag：picoCTF{7h3r3_15_n0_5p00n_f2f7a0e5}</p>
+<hr>
+<h1 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h1><p>(等待后期慢慢填坑ing…)</p>
+<h2 id="Includes"><a href="#Includes" class="headerlink" title="Includes"></a>Includes</h2><p>直接打开源代码，在style.css和script.js中找到注释掉的flag:<br>picoCTF{1nclu51v17y_1of2_f7w_2of2_5a94a145}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/03/27/picoCTF2022-wp-fgps/" data-id="cl19e96fs0000zgvr036sfm9u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Crypto/" rel="tag">Crypto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Crypto/" rel="tag">Crypto</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Misc/" rel="tag">Misc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CTF/" style="font-size: 10px;">CTF</a> <a href="/tags/Crypto/" style="font-size: 10px;">Crypto</a> <a href="/tags/Misc/" style="font-size: 10px;">Misc</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/03/27/picoCTF2022-wp-fgps/">picoCTF2022_wp_fgps</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
